@@ -47,17 +47,17 @@ AddEventHandler('Fax:BackupReq', function(bk, s)
 
     if checkPed(GetPlayerPed(PlayerId()), leoPeds) then
         if bkLvl == "1" then
-            bkLvlTxt = "~b~code 1"
-        elseif bkLvl == "2" then
-            bkLvlTxt = "~y~code 2"
-        elseif bkLvl == "3" then
-            bkLvlTxt = "~r~CODE 3"
+            bkLvlTxt = "~r~PRIO 1"
             PlaySoundFrontend(-1, "Mission_Pass_Notify", "DLC_HEISTS_GENERAL_FRONTEND_SOUNDS", 1)
+        elseif bkLvl == "2" then
+            bkLvlTxt = "~y~prio 2"
+        elseif bkLvl == "3" then
+            bkLvlTxt = "~b~prio 3
         elseif bkLvl == "99" then
-            bkLvlTxt = "~r~~h~CODE 99"
+            bkLvlTxt = "~r~~h~OMEDELBAR LIVSFARA"
         end
 
-        ShowInfo("An officer is in need of assistance " .. bkLvlTxt .. "~s~. ~o~Location: ~s~" .. streetName .. ".")
+        ShowInfo("En kollega behöver förstärkning med " .. bkLvlTxt .. "~s~. ~o~till: ~s~" .. streetName .. ".")
         SetNewWaypoint(coords.x, coords.y)
 
         if bkLvl == "99" then
