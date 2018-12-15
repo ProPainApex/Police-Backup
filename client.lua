@@ -52,7 +52,7 @@ AddEventHandler('Fax:BackupReq', function(bk, s)
         elseif bkLvl == "2" then
             bkLvlTxt = "~y~prio 2"
         elseif bkLvl == "3" then
-            bkLvlTxt = "~b~prio 3
+            bkLvlTxt = "~b~prio 3"
         elseif bkLvl == "99" then
             bkLvlTxt = "~r~~h~OMEDELBAR LIVSFARA"
         end
